@@ -1,0 +1,47 @@
+@import './adapter.less';
+@import './base.less';
+@import './mixin.less';
+@import "./bodysize.less";
+
+.add_category {
+  border: 0;
+  background-color: #2D93CA;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.wrapper {
+  //上部导航
+  .category_nav {
+    padding-top: 20px;
+  }
+  //分类内容
+  .category_content {
+    ul {
+      overflow: hidden;
+    }
+    li {
+      width: 200px;
+      height: 220px;
+      text-align: center;
+      float: left;
+      list-style: none;
+      background-color: #fff;
+      margin: 10px;
+      border:1px #ddd solid;
+      box-shadow: 0 0 10px #ddd;
+      &:hover {
+        box-shadow: 0 0 10px #999;
+      }
+      a {
+        display: block;
+        height: 220px;
+        line-height: 220px;
+      }
+    }
+  }
+}

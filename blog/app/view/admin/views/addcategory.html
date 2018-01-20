@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./app/view/admin/public/css/category.css">
+</head>
+<body>
+    <!--添加分类-->
+    <div class="wraper_add">
+        <form action="index.php?p=admin&a=addCategory&c=category" method="post">
+            <fieldset>
+                <legend>添加分类</legend>
+                <div class="item">
+                    <label>分类中文名</label>
+                    <input type="text" name="category_name">
+                </div>
+                <div class="item">
+                    <label>分类英文名</label>
+                    <input type="text" name="category_e_name">
+                </div>
+                <div class="item">
+                    <input type="submit" value="提交" class="add_category">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="./app/view/admin/public/lib/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="./app/view/admin/scripts/category.js"></script>
+    <script type="text/javascript" src="./app/view/admin/scripts/addcategory.js"></script>
+</body>
+</html>

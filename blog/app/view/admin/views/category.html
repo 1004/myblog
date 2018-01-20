@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./app/view/admin/public/css/category.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="category_nav">
+            <button class="add_category">添加分类</button>
+        </div>
+        <div class="category_content">
+            <ul class="clearfix">
+                <?php foreach($rows as $v):?>
+                    <li><a href="#"><?php echo $v['category_name']?></a></li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="./app/view/admin/public/lib/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="./app/view/admin/scripts/category.js"></script>
+    <script type="text/javascript" src="./app/view/admin/scripts/categorylist.js"></script>
+
+</body>
+</html>

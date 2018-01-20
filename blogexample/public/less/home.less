@@ -1,0 +1,278 @@
+@import './base.less';
+@import './adapter.less';
+@import './mixin.less';
+@import './header.less';
+@import "./footer.less";
+
+.wrapper {
+  .content  {
+    overflow: hidden;
+
+    //主题左侧部分 触发bfc
+    .main_left {
+      overflow: hidden;
+      padding-right: 28px;
+
+      //分类标题部分
+      .category_title_con {
+        height: 111px;
+        margin-top: @margintop;
+        background-color: #fff;
+        .box-line-shadow();
+        position: relative;
+        p {
+          font-size: 18px;
+          color: #1c1c1c;
+          &:nth-child(1) {
+            font-weight: bold;
+            font-size: 19px;
+          }
+          &:nth-child(2) {
+            margin-top: 20px;
+          }
+        }
+        .con {
+          position: absolute;
+          top: 50%;
+          left: 22px;
+          .box-translate(0,-50%);
+        }
+      }
+
+      //文章列表
+      .article_list {
+        .article_item {
+          margin-top:14px;
+          background-color: #fff;
+          .box-line-shadow();
+          .item_top {
+            height: 186px;
+            border-bottom: 1px solid #F3F3F3;
+            overflow: hidden;
+            //图片
+            .item_img_con {
+              float: left;
+              width: 239px;
+              height: 144px;
+              margin-left: 20px;
+              margin-top: 20px;
+              padding: 2px;
+              border: 1px solid #F3F3F3;
+            }
+            //内容信息
+            .item_info {
+              overflow: hidden;
+              margin: 20px 20px 5px;
+              padding-left: 20px;
+              .item_title {
+                  h2{
+                    font-size: 20px !important;
+                  }
+              }
+              .item_desc {
+                margin-top: 18px;
+                font-size: 16px;
+                color: #848484;
+              }
+            }
+          }
+          .item_bottom {
+            height: 42px;
+            padding-left: 20px;
+            a {
+              float: left;
+              line-height: 42px;
+              font-size: 14px;
+              color: #333;
+              height: 100%;
+              margin-right: 18px;
+              &:hover {
+                color: #4FADED;
+              }
+            }
+            .lool_detail {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    //右部
+    .main_right {
+      width: 291px;
+      float: right;
+      padding-right: 4px;
+
+      //搜索
+      .right_search {
+        margin-top: @margintop;
+        background-color: #fff;
+        height: 96px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+        .box-line-shadow();
+        input {
+          position: absolute;
+          width: 230px;
+          height: 34px;
+          left: 50%;
+          top: 50%;
+          .box-translate(-50%,-50%);
+          border: 1px solid @input_border_color;
+        }
+      }
+      //个人信息
+      .person_info {
+        height: 536px;
+        margin-top: @margintop;
+        background-color: #fff;
+        .box-line-shadow();
+        position: relative;
+        .info {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          //头像
+          .icon_con {
+            width: 230px;
+            height: 161px;
+            margin: 29px auto 0;
+            position: relative;
+            .icon {
+              height: 120px;
+            }
+            .circlelogo {
+              position: absolute;
+              width: 87px;
+              height: 87px;
+              left: 50%;
+              bottom: 0;
+              margin-left: -43px;
+              background-color: #FDFDDD;
+              .border-radius(50%);
+              text-align: center;
+              label {
+                display: block;
+                height: 87px;
+                line-height: 87px;
+                color: #54ADF2;
+                font-size: 20px;
+              }
+            }
+          }
+          //联系方式
+          .link_icon {
+            text-align: center;
+            a {
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              position: relative;
+              i {
+                position: absolute;
+                font-size: 26px;
+                left: 50%;
+                top: 50%;
+                .box-translate(-50%,-50%);
+              }
+            }
+          }
+          .article_title {
+            font-size: 16px;
+            color: #848484;
+            text-align: center;
+          }
+          .article {
+            margin-top: 10px;
+            li {
+              margin-top: 14px;
+              margin-left: 76px;
+            }
+            p {
+              text-align: left !important;
+              font-weight: 300;
+              text-align: center;
+              font-size: 16px;
+              color: #333;
+            }
+            span {
+
+            }
+          }
+        }
+      }
+
+      //原创随笔
+      .con_category {
+        margin-top: @margintop;
+        background-color: #fff;
+        .box-line-shadow();
+        position: relative;
+        height: 652px;
+        .category {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+          font-size: 16px;
+          font-weight: 300;
+          color: #333;
+          .category_tilte {
+            width: 235px;
+            height: 47px;
+            margin: 14px auto 0;
+            border-bottom: 1px solid #E7E7E7;
+            h3 {
+              display: inline-block;
+              line-height: 47px;
+              font-size: 16px;
+              color: #333;
+              border-bottom: 2px solid #51ADED;
+            }
+          }
+          ul {
+            margin-top: 20px;
+          }
+          li {
+            height: 41px;
+            position: relative;
+            width: 235px;
+            margin: 0 auto;
+            a {
+              display: inline-block;
+              color: #333;
+              margin-left: 8px;
+              &:hover {
+                color: #51ADED;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and(max-width:990px){
+  .main_right {
+    display: none !important;
+  }
+
+  .main_left {
+    margin-right: 0px !important;
+  }
+
+}
+@media only screen and(max-width:768px){
+
+}
+
+
+

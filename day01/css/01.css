@@ -1,0 +1,32 @@
+.cc{
+    clear: both;
+    background-color: aqua;
+    margin: 4px;
+    padding: 10px;
+    float: left;
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+.aa{
+    position: relative;/**“relative”意思是DIV的位置是相对于自身tag的 “absolute”是说 DIV tag 的位置是相对于它父级relative的窗口或者body标签。**/
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    visibility: hidden;
+}
+
+.bb{
+    background-color: aqua;
+    position: absolute;
+    left:100px;
+    width: 150px;
+    top: 100px;
+}
+.dd{
+    width: 200px;
+    margin: 0 auto;
+    top:100px;
+    position: relative;
+}

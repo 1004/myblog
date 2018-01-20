@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>添加用户</title>
+    <link rel="stylesheet" type="text/css" href="./app/view/admin/public/css/adduser.css">
+</head>
+<body>
+    <div class="wrapper-add">
+        <form action="index.php?a=adduser&p=admin&c=operationuser" method="post" onsubmit="return vaild()">
+            <fieldset>
+                <legend>添加管理员</legend>
+                <label>姓名</label><input type="text" name="name" class="name"><br>
+                <label>密码</label><input type="password" name="pwd" class="pwd"><br>
+                <input type="submit" value="添加"><br>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="./app/view/admin/public/lib/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="./app/view/admin/scripts/adduser.js"></script>
+</body>
+</html>

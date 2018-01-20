@@ -1,0 +1,59 @@
+--数据库
+CREATE DATABASE x_blog;
+
+USE x_blog;
+
+--管理员表
+CREATE TABLE x_admin(
+  admin_id int unsigned not null primary key auto_increment,
+  admin_name varchar(30) not null,
+  admin_pwd char(32) not null comment 'md5',
+  admin_email varchar(100) default '',
+  last_login int default 0,
+  last_ip varchar(15),
+  last_ip_int int comment '整形ip'
+) engine=myisam charset=utf8;
+
+--普通管理员
+CREATE TABLE x_common_admin(
+    id int unsigned not null primary key auto_increment,
+    name varchar(30) not null,
+    pwd char(32) not null,
+    last_login int default 0,
+    last_ip varchar(15)
+)engine=myisam charset=utf8;
+
+
+
+insert into x_admin(admin_name,admin_pwd) values('xky',md5(123456));
+
+insert into x_common_admin(name,pwd,last_login,last_ip) values('test3',md5(123456),unix_timestamp(now()),'127.0.0.1');
+
+--android代码类别
+CREATE TABLE android_category(
+    id int unsigned not null primary key auto_increment,
+    category_name varchar(100) not null,
+    code_num int default 0
+    category_e_name varchar(100) not null,
+)engine=myisam charset=utf8;
+
+CREATE TABLE android_code(
+    id int unsigned not null primary key auto_increment,
+    code_name varchar(100) not null,
+    code_desc varchar(200) ,
+    code_imgs varchar(255),
+    code_looks int default 0,
+    code_downloads int default 0,
+    code_create_time int default 0,
+    code_big int default 0,
+    code_env varchar(100) ,
+    code_address varchar(200),
+    code_example text,
+    categoryid int unsigned
+)engine=myisam charset=utf8;
+
+--session 入库
+create table session(
+sess_id varchar(32) primary key,
+sess_data text
+) charset=utf8;

@@ -1,0 +1,26 @@
+
+.border-radius(@r){
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	border-radius: @r;
+}
+
+.box-sizing(){
+	-webkit-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+
+.box-translate(@xpercent,@ypercent){
+	-moz-transform: translate(@xpercent, @ypercent);
+	-ms-transform: translate(@xpercent, @ypercent);
+	-webkit-transform: translate(@xpercent, @ypercent);
+	transform: translate(@xpercent, @ypercent);
+}
+
+.box-line-shadow() {
+	border: 1px solid @line_color;
+	-moz-box-shadow:2px 2px 10px #eee;
+	-webkit-box-shadow:2px 2px 10px #eee;
+	box-shadow: 2px 2px 10px #eee;
+}

@@ -1,0 +1,30 @@
+.headercon {
+  height: 100px;
+  background-color: #3F51B5;
+}
+.headercon .header_main h1 {
+  line-height: 100px;
+  float: left;
+}
+.headercon .header_main h1 a {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 300;
+}
+.headercon .header_main ul {
+  float: right;
+}
+.headercon .header_main li {
+  margin-top: 20px;
+  float: right;
+  line-height: 60px;
+  margin-left: 40px;
+}
+.headercon .header_main li a {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 400;
+}
+.headercon .header_main li i {
+  padding-left: 3px;
+}

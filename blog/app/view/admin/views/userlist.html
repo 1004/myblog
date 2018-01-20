@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>用户列表</title>
+    <link rel="stylesheet" type="text/css" href="./app/view/admin/public/css/userlist.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="usertop">
+            <input type="button" value="添加管理员" class="adduser">
+        </div>
+        <div class="usermain">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>管理员姓名</th>
+                        <th>登录时间</th>
+                        <th>ip地址</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tfoot>
+
+                </tfoot>
+                <tbody>
+                    <?php foreach($rows as $v):?>
+                    <tr>
+                        <td><?php echo $v['id']?></td>
+                        <td><?php echo $v['name']?></td>
+                        <td><?php echo $v['last_login']?></td>
+                        <td><?php echo $v['last_ip']?></td>
+                        <td>
+                            <input type="button" value="删除" class="userdelete" data-id="<?php echo $v['id']?>">
+                            <input type="button" value="编辑" class="useredit" data-id="<?php echo $v['id']?>">
+                        </td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<script type="text/javascript" src="./app/view/admin/public/lib/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="./app/view/admin/scripts/user.js"></script>
+<script type="text/javascript" src="./app/view/admin/scripts/userlist.js"></script>
+</body>
+</html>
