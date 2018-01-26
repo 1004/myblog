@@ -663,7 +663,7 @@ body {
   color: #ffffff;
 }
 .wrapper .fix_menu_info span {
-  display: block;
+  display: none;
   padding-top: 12px;
 }
 .wrapper .fix_menu_info .message_info {
