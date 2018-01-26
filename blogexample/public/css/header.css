@@ -2,6 +2,11 @@
   height: 100px;
   background-color: #3F51B5;
 }
+.headercon .header_main {
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+}
 .headercon .header_main h1 {
   line-height: 100px;
   float: left;
@@ -19,6 +24,10 @@
   float: right;
   line-height: 60px;
   margin-left: 40px;
+  position: relative;
+}
+.headercon .header_main li:hover ol {
+  display: block;
 }
 .headercon .header_main li a {
   font-size: 17px;
@@ -27,4 +36,47 @@
 }
 .headercon .header_main li i {
   padding-left: 3px;
+}
+.headercon .header_main li ol {
+  display: none;
+  width: 200px;
+  position: absolute;
+  z-index: 999 !important;
+  top: 50px;
+  left: -74px;
+  background-color: #FFFFFF;
+  border: 1px solid #ECEFF0;
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+.headercon .header_main li ol li {
+  width: 100%;
+  height: 52px !important;
+  line-height: 52px !important;
+  margin-left: 0;
+  margin-top: 0;
+}
+.headercon .header_main li ol li:last-child {
+  margin-bottom: 10px;
+}
+.headercon .header_main li ol li a {
+  font-size: 15px;
+  text-align: center;
+  color: #848484 !important;
+}
+.headercon .header_main li ol li a:hover {
+  color: #51ADED !important;
+}
+@media only screen and (max-width: 780px) {
+  .headercon .header_main {
+    width: 100%;
+  }
+  .headercon .header_main h1 {
+    float: none;
+    text-align: center;
+  }
+  .headercon .header_main ul {
+    display: none;
+  }
 }

@@ -81,6 +81,17 @@ input {
   outline: none;
   border: 0px;
 }
+html,
+body {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 12px;
@@ -125,6 +136,11 @@ input {
   height: 100px;
   background-color: #3F51B5;
 }
+.headercon .header_main {
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+}
 .headercon .header_main h1 {
   line-height: 100px;
   float: left;
@@ -142,6 +158,10 @@ input {
   float: right;
   line-height: 60px;
   margin-left: 40px;
+  position: relative;
+}
+.headercon .header_main li:hover ol {
+  display: block;
 }
 .headercon .header_main li a {
   font-size: 17px;
@@ -151,9 +171,68 @@ input {
 .headercon .header_main li i {
   padding-left: 3px;
 }
+.headercon .header_main li ol {
+  display: none;
+  width: 200px;
+  position: absolute;
+  z-index: 999 !important;
+  top: 50px;
+  left: -74px;
+  background-color: #FFFFFF;
+  border: 1px solid #ECEFF0;
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+.headercon .header_main li ol li {
+  width: 100%;
+  height: 52px !important;
+  line-height: 52px !important;
+  margin-left: 0;
+  margin-top: 0;
+}
+.headercon .header_main li ol li:last-child {
+  margin-bottom: 10px;
+}
+.headercon .header_main li ol li a {
+  font-size: 15px;
+  text-align: center;
+  color: #848484 !important;
+}
+.headercon .header_main li ol li a:hover {
+  color: #51ADED !important;
+}
+@media only screen and (max-width: 780px) {
+  .headercon .header_main {
+    width: 100%;
+  }
+  .headercon .header_main h1 {
+    float: none;
+    text-align: center;
+  }
+  .headercon .header_main ul {
+    display: none;
+  }
+}
 .footercon {
   height: 205px;
   background-color: #23282D;
+  text-align: center;
+  padding-top: 90px;
+}
+.footercon p {
+  font-family: Din, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.footercon a {
+  display: inline;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footercon a:hover {
+  color: #51aded;
 }
 .wrapper .content {
   overflow: hidden;
@@ -272,7 +351,18 @@ input {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  padding-left: 10px;
+  font-size: 16px;
+  color: #848484;
   border: 1px solid #cccccc;
+}
+.wrapper .content .main_right .right_search input::selection {
+  background: #262a30;
+  color: #fcfcfc;
+}
+.wrapper .content .main_right .right_search input:focus {
+  border: #87C6F9 1px solid;
+  box-shadow: 0 0 8px #67a6d9;
 }
 .wrapper .content .main_right .person_info {
   height: 536px;
@@ -406,14 +496,258 @@ input {
 .wrapper .content .main_right .con_category .category li a:hover {
   color: #51ADED;
 }
+.wrapper .content .main_right .con_recommand {
+  margin-top: 32px;
+  background-color: #fff;
+  border: 1px solid #eceff0;
+  -moz-box-shadow: 2px 2px 10px #eee;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+  box-shadow: 2px 2px 10px #eee;
+}
+.wrapper .content .main_right .con_recommand .rec_tab {
+  width: 230px;
+  margin: 14px auto 0;
+  overflow: hidden;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper .content .main_right .con_recommand .rec_tab ul {
+  overflow: hidden;
+  height: 100%;
+}
+.wrapper .content .main_right .con_recommand .rec_tab li {
+  width: 33.33333%;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  line-height: 72px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.wrapper .content .main_right .con_recommand .rec_tab li.check {
+  border-bottom: 2px solid #51ADED;
+}
+.wrapper .content .main_right .con_recommand .rec_tab li a {
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+  color: #333;
+}
+.wrapper .content .main_right .con_recommand .rec_tab li a label {
+  cursor: pointer;
+}
+.wrapper .content .main_right .con_recommand .rec_con {
+  width: 230px;
+  margin: 14px auto ;
+}
+.wrapper .content .main_right .con_recommand .rec_con li {
+  font-size: 15px;
+  height: 26px;
+}
+.wrapper .content .main_right .con_recommand .rec_con li a {
+  line-height: 26px;
+  color: #999;
+}
+.wrapper .content .main_right .con_recommand .rec_con li a:hover {
+  color: #333333;
+}
+.wrapper .content .main_right .near_commit {
+  margin-top: 32px;
+  background-color: #fff;
+  border: 1px solid #eceff0;
+  -moz-box-shadow: 2px 2px 10px #eee;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+  box-shadow: 2px 2px 10px #eee;
+}
+.wrapper .content .main_right .near_commit .commit_con .commit_tilte {
+  width: 235px;
+  height: 47px;
+  margin: 14px auto 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper .content .main_right .near_commit .commit_con .commit_tilte h3 {
+  float: left;
+  display: inline-block;
+  line-height: 47px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 2px solid #51ADED;
+}
+.wrapper .content .main_right .near_commit .commit_con .commit_list {
+  width: 230px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.wrapper .content .main_right .near_commit .commit_con .commit_list li {
+  margin: 14px 0;
+}
+.wrapper .content .main_right .near_commit .commit_con .commit_list a {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.wrapper .content .main_right .tagcollections {
+  margin-top: 32px;
+  background-color: #fff;
+  border: 1px solid #eceff0;
+  -moz-box-shadow: 2px 2px 10px #eee;
+  -webkit-box-shadow: 2px 2px 10px #eee;
+  box-shadow: 2px 2px 10px #eee;
+}
+.wrapper .content .main_right .tagcollections .title {
+  width: 235px;
+  height: 47px;
+  margin: 14px auto 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper .content .main_right .tagcollections .title h3 {
+  float: left;
+  display: inline-block;
+  line-height: 47px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 2px solid #51ADED;
+}
+.wrapper .content .main_right .tagcollections .tag_container {
+  width: 235px;
+  margin: 14px auto ;
+}
+.wrapper .content .main_right .tagcollections .tag_container ul {
+  overflow: hidden;
+}
+.wrapper .content .main_right .tagcollections .tag_container li {
+  float: left;
+  height: 25px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #2196F3;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.wrapper .content .main_right .tagcollections .tag_container li:nth-child(2n) {
+  background: #8BC34A;
+}
+.wrapper .content .main_right .tagcollections .tag_container li:nth-child(3n) {
+  background: #F44336;
+}
+.wrapper .content .main_right .tagcollections .tag_container li:hover {
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+.wrapper .content .main_right .tagcollections .tag_container li a {
+  float: left;
+  line-height: 25px;
+  display: inline-block;
+  font-size: 12px !important;
+  color: #fff !important;
+}
 .wrapper .footer {
   margin-top: 30px;
 }
-@media only screen and (max-width: 990px) {
+.wrapper .fix_menu_info {
+  position: fixed;
+  right: 0px;
+  bottom: 120px;
+  width: 116px;
+}
+.wrapper .fix_menu_info .message_info {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #9B9C9C;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 0.2s;
+}
+.wrapper .fix_menu_info .message_info:hover {
+  background-color: #ED2A2F;
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+.wrapper .fix_menu_info .wx_info {
+  width: 62px;
+  height: 62px;
+  margin-top: 14px;
+  border-radius: 50%;
+  background-color: #7ACA7E;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 0.2s;
+}
+.wrapper .fix_menu_info .wx_info:hover {
+  background-color: #44B549;
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+.wrapper .back_arrow {
+  position: fixed;
+  right: 0px;
+  bottom: 41px;
+  margin-right: 54px;
+  display: none;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #FF4081;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 0.2s;
+}
+.wrapper .back_arrow:hover {
+  background-color: #FF4081;
+  -moz-box-shadow: 2px 3px 20px #999;
+  -webkit-box-shadow: 2px 3px 20px #999;
+  box-shadow: 2px 3px 20px #999;
+}
+@media only screen and (max-width: 960px) {
   .main_right {
     display: none !important;
   }
-  .main_left {
-    margin-right: 0px !important;
+}
+@media only screen and (max-width: 780px) {
+  .innercenter {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .article_list .article_item .item_top {
+    margin-right: 20px;
+    height: auto !important;
+  }
+  .article_list .article_item .item_top .item_img_con {
+    float: none !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .article_list .article_item .item_top .item_info {
+    margin: 10px 0px 5px !important;
+    padding-left: 20px !important;
+  }
+  .article_list .article_item .item_top .item_info .item_desc {
+    margin-bottom: 10px !important;
+  }
+  .article_list .article_item .item_bottom .item_pull1 {
+    display: none !important;
+  }
+  .fix_menu_info {
+    display: none !important;
   }
 }
