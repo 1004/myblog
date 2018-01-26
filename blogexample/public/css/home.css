@@ -658,6 +658,13 @@ body {
   right: 0px;
   bottom: 120px;
   width: 116px;
+  text-align: center;
+  font-size: 25px;
+  color: #ffffff;
+}
+.wrapper .fix_menu_info span {
+  display: block;
+  padding-top: 12px;
 }
 .wrapper .fix_menu_info .message_info {
   width: 62px;
