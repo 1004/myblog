@@ -1,0 +1,6 @@
+#
+# robots.txt for YzmCMS v3.7
+#
+User-agent: * 
+Disallow: /cache
+Disallow: /yzmphp
